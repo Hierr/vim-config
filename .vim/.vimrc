@@ -1,4 +1,12 @@
-inoremap jk <ESC>
+let g:vimtex_view_method = "zathura"
+let g:latex_view_general_viewer = "zathura"
+let g:tex_flavor = "latex"
+set grepprg=grep\ -nH\ $*
+let &rtp = "~/.vim/bundle/vimtex," .&rtp
+" pathogen path
+execute pathogen#infect()
+" remap of esc key
+inoremap kk <ESC>
 "                                                   setup to colorscheme Molokai
 set nocompatible
 " format
@@ -26,24 +34,3 @@ set modeline
 set ls=2
 " colorscheme
 colorscheme molokai
-
-"                                                    Latex-suite
-
-" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" can be called correctly.
- set shellslash
-
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
- set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
- let g:tex_flavor='latex'
-"                                              omni completion
-"set omnifunc=syntaxcomplete#Complete
-
-"                                               pathogen path
-execute pathogen#infect()
