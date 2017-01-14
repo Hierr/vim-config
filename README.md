@@ -1,1 +1,1 @@
-My .vimrc and .vm folder
+My .vimrc, .latexmkrc and .vim folder
