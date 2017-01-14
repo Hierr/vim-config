@@ -1,1 +1,1 @@
-My .vimrc config file
+My .vimrc and .vm folder
